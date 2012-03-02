@@ -6,10 +6,11 @@ require_once 'customHandler.inc';
 // NOTE: do not add a trailing slash
 // define("D_INSTALL_PATH", "c:/progra~1/easyph~1/www");
 // define("D_INSTALL_PATH", "/Library/WebServer/Documents");
-define("D_INSTALL_PATH", "/usr/local/apache2/htdocs");
+//define("D_INSTALL_PATH", "/usr/local/apache2/htdocs");
+define("D_INSTALL_PATH","/Applications/MAMP/htdocs");
 
 // Paths -- for these, add trailing slash
-define("D_WEB_PATH", "/wda2-winestore/");
+define("D_WEB_PATH", "/winestore/");
 define("D_CART", D_WEB_PATH . "cart/");
 define("D_CARTIMAGES", D_CART . "images/");
 define("D_CUSTOMER", D_WEB_PATH . "customer/");

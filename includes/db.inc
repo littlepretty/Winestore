@@ -19,6 +19,6 @@ for use.
    // Database parameters -- you need to change these
    $hostname = "127.0.0.1";
    $databasename = "winestore";
-   $username = "fred";
-   $password = "shhh";
+   $username = "root";
+   $password = "root";
 ?>

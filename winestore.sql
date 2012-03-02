@@ -5,11 +5,11 @@
 ## redistributed in source or binary form so long as an acknowledgment appears
 ## in derived source files.
 ## The citation should list that the code comes from Hugh E. Williams and David 
-## Lane, "Web Database Application with PHP and MySQL" published by O'Reilly & 
+## Lane, "Web Database Application with PHP and MySQL" published by OReilly & 
 ## Associates.
 ##
 ## This code is under copyright and cannot be included in any other book,
-## publication, or educational product without permission from O'Reilly &
+## publication, or educational product without permission from OReilly &
 ## Associates. No warranty is attached; we cannot take responsibility for errors 
 ## or fitness for use.
 
@@ -47,7 +47,7 @@ CREATE TABLE grape_variety (
   variety_id int(3) NOT NULL,
   variety varchar(50) DEFAULT '' NOT NULL,
   PRIMARY KEY (variety_id),
-  KEY var (variety)
+  KEY variety (variety)
 ) ;
 
 CREATE TABLE inventory (
@@ -72,7 +72,7 @@ CREATE TABLE items (
 CREATE TABLE orders (
   cust_id int(5) NOT NULL,
   order_id int(5) NOT NULL,
-  order_date timestamp(12),
+  order_date timestamp NOT NULL,
   instructions varchar(128),
   creditcard char(16),
   expirydate char(5),
@@ -86,11 +86,11 @@ CREATE TABLE region (
   KEY region (region_name)
 );
 
-CREATE TABLE wine_type(
+CREATE TABLE wine_type (
   wine_type_id int(2) NOT NULL,
   wine_type varchar(32) NOT NULL,
   PRIMARY KEY (wine_type_id)
-) ;
+);
 
 CREATE TABLE wine (
   wine_id int(5) NOT NULL,
@@ -105,12 +105,12 @@ CREATE TABLE wine (
 ) ;
 
 CREATE TABLE wine_variety (
-  wine_id int(5) DEFAULT '0' NOT NULL,
-  variety_id int(3) DEFAULT '0' NOT NULL,
-  id int(1) DEFAULT '0' NOT NULL,
+  wine_id int(5) DEFAULT 0 NOT NULL,
+  variety_id int(3) DEFAULT 0 NOT NULL,
+  id int(1) DEFAULT 0 NOT NULL,
   PRIMARY KEY (wine_id,variety_id),
   KEY wine (wine_id,variety_id)
-)  ;
+) ;
 
 CREATE TABLE winery (
   winery_id int(4) NOT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE winery (
   PRIMARY KEY (winery_id),
   KEY name (winery_name),
   KEY region (region_id)
-)  ;
+) ;
 
 CREATE TABLE titles (
   title_id int(2) NOT NULL,
